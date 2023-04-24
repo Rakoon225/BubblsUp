@@ -1,0 +1,9 @@
+.swiper-button-prev,
+.swiper-button-next {
+	color: var(--grey);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	font-size: 27px !important;
+}

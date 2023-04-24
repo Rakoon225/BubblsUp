@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+	<title>BubblsUp - Шарики в Нвоовосибирске</title>
+
+
+	<link rel="stylesheet" href="assets/sources/boostrap/bootstrap.min.css">
+
+	<!-- Slider JS only -->
+	<script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<!-- Slider CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<!-- Твои стили -->
+	<link rel="stylesheet" href="./css/global.css">
+	<!-- !JavaScript Bundle with Popper -->
+
+	<!-- data -->
+	<script src="js/data/data.js" defer></script>
+	<!-- слайдер -->
+	<script src="js/slider.js" defer></script>
+	<!-- отзывы -->
+	<script src="js/createFeedbacks.js" defer></script>
+	<!-- функция, которая делает карточки -->
+	<script src="js/createCart.js" defer></script>
+	<!-- функция логики -->
+	<script src="js/logicFunction.js" defer></script>
+	<!-- модальное окно -->
+	<script src="js/modal.js" defer></script>
+	<!-- главный файл -->
+	<script src="js/index.js" defer></script>
+	<!-- !!JavaScript Bundle with Popper -->
+	<!--_________fonts_________-->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<!----------------------------------->
+
+<body>
+	<!--_________________________________________-->
+	<div class="wrapper">
+		<header class="d-flex align-items-center">
+			<div class="header-container container-lg d-flex justify-content-between align-items-center">
+				<div class="logo-container">
+					<a href="#">
+						<span class="logo">BubblsUp</span>
+					</a>
+				</div>
+				<nav class="menu">
+					<ul class="menu-list d-flex gap-3 align-items-center">
+						<a href="#hello">
+							<li class="menu-elements">Главная</li>
+						</a>
+						<a href="#catalog">
+							<li class="menu-elements">Каталог</li>
+						</a>
+						<a href="#contact">
+							<li class="menu-elements">Заказать</li>
+						</a>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div class="block1" id="hello">
+				<div class="block1-container container">
+					<div class="block1-text d-flex flex-column align-items-center text-center gap-2">
+						<div class="d-flex flex-column align-items-center text-center">
+							<h1 class="block1-title">Шарики для всех!</h1>
+							<div class="block1-hr"></div>
+						</div>
+						<p class="block1-description">Гелиевые шары - отличное дополнение к
+							празднику. На любой вкус и цвет. Вы можете
+							выбрать сет в нашем каталоге. Хотите
+							посмотреть? :)</p>
+						<a href="#catalog">
+							<div class="block1-button button">Хочу!</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="block6 mt-4" id="catalog">
+				<div class="block6-container container">
+					<div class="Title text-center d-flex flex-column">
+						<span class="Main-title">Каталог</span>
+						<span class="Main-secondary">bubbls up</span>
+					</div>
+					<nav class="sistem row gap-1 mt-3">
+						<div class="col-10 col-sm-6">
+							<div class="position-relative">
+								<div class="filter button">
+									<span class="filter-span me-auto">Все категории</span>
+									<div class="filter-icon-container">
+										<img src="assets\content\selectW.png" class="filter-icon"
+											alt="иконка стрелки" />
+									</div>
+								</div>
+								<nav class="filter-window disabled">
+									<ul class="window-list">
+										<li class="window-elements" data-value="all" data-title="Все категории">Все
+											категории</li>
+										<li class="window-elements" data-value="she" data-title="Для неё">Для неё</li>
+										<li class="window-elements" data-value="he" data-title="Для него">Для него</li>
+										<li class="window-elements" data-value="kid" data-title="Для детей">Для детей
+										</li>
+										<li class="window-elements" data-value="vp" data-title="Выписка">Выписка</li>
+										<li class="window-elements" data-value="bx" data-title="Коробки">Коробки</li>
+										<li class="window-elements" data-value="nm" data-title="Цифры">Цифры</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="col">
+							<nav class="pagination d-flex flex-wrap gap-1">
+							</nav>
+						</div>
+					</nav>
+					<div id="cards" class="justify-content-center">
+					</div>
+				</div>
+			</div>
+			<div class="block4 blocks" id="contact">
+				<div class="block4-container container">
+					<div class="Title text-center d-flex flex-column">
+						<span class="Main-title">Как нам связаться с вами?</span>
+						<span class="Main-secondary">bubbls up</span>
+					</div>
+					<div class="b4-blocks row gap-3 mt-2">
+						<div class="b4-form col">
+							<div class="Title text-center d-flex flex-column">
+								<span class="Main-title title-contacts">1.Оставьте заявку</span>
+							</div>
+							<form class="form mt-2 ajaxform" method="post">
+								<input type="text" name="имя" id="name" autocomplete="off" class="req form-element"
+									placeholder="Имя" required />
+								<input type="phone" name="телефон" id="phone" autocomplete="off"
+									class="req form-element" placeholder="Телефон" required />
+								<input type="email" name="почта" id="email" autocomplete="off" class="req form-element"
+									placeholder="Почта" required />
+								<textarea name="" class="form-element" autocomplete="off" id="form-textarea"
+									placeholder="Текст" required></textarea>
+								<button class="form-button button">Отправить</button>
+							</form>
+						</div>
+
+						<div class="b4-contacts col">
+							<div class="Title text-center d-flex flex-column">
+								<span class="Main-title title-contacts">2.Напишите нам</span>
+							</div>
+							<div class="b4_cards mt-2">
+								<div class="b4_card">8-953-861-63-20
+								</div>
+								<span>а также</span>
+								<a href="https://wa.me/message/SYOTK6JVQEQIA1" target="_blank">
+									<div class="b4_card button">WhatsApp</div>
+								</a>
+								<a href="https://www.avito.ru/novosibirsk/predlozheniya_uslug/vozdushnye_shary_s_geliem_2369521321?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller"
+									target="_blank">
+									<div class="b4_card button">Avito</div>
+								</a>
+								<a href="https://vk.com/bubblesshariknsk" target="_blank">
+									<div class="b4_card button">Vk</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block2 blocks" id="why">
+				<div class="block2-container container d-flex flex-column justify-content-center align-items-center">
+					<div class="Title text-center d-flex flex-column">
+						<span class="Main-title">Почему мы</span>
+						<span class="Main-secondary">bubbls up</span>
+					</div>
+
+					<div class="b2-cards row mt-3 mt-lg-3">
+						<div class="col-lg-4 col-md-6">
+							<div class="b2-card">
+								<img src="assets/content/quality2.png" class="b2-image" alt="иконка приемуществ"
+									width="100px" />
+								<div class="b2_card-body">
+									<span class="block2-title">Гарантия полёта</span>
+									<div class="hr"></div>
+									<p class="description">Наши шары с гелием летают от 3-х дней до месяца</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-6">
+							<div class="b2-card">
+								<img src="assets/content/watch.png" class="b2-image" alt="иконка приемуществ"
+									width="100px" />
+								<div class="b2_card-body">
+									<span class="block2-title">Ежедневно</span>
+									<div class="hr"></div>
+									<p class="description">Заказы принимаются каждый день без выходных</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-md-12">
+							<div class="b2-card b2-last">
+								<img src="assets/content/diversify.png" class="b2-image" alt="иконка приемуществ"
+									width="100px" />
+								<div class="b2_card-body">
+									<span class="block2-title">Разнообразие</span>
+									<div class="hr"></div>
+									<p class="description">Индивидуальный подход к любому празднику</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block3 blocks" id="story">
+				<div class="block3-container container-lg">
+					<div class="row row-cols d-flex justify-content-around">
+						<div class="col col-md-5">
+							<div class="block3-text d-flex flex-column align-items-center text-center">
+								<div class="Title text-center d-flex flex-column">
+									<span class="Main-title">Наша история</span>
+									<span class="Main-secondary">bubbls up</span>
+								</div>
+								<div class="hr"></div>
+								<p class="description">
+									На протяжении нескольких лет мы дарим искренние эмоции нашим любимым клиентам!С
+									помощью стильных и красочных композиций из шаров украшаем ваш праздник и знакомим с
+									миром аэродизайна!
+								</p>
+							</div>
+						</div>
+						<img class="block3-image col-4" src="assets/content/photo1678637310.webp" alt="Шарики" />
+					</div>
+				</div>
+			</div>
+			<div class="block5 blocks" id="feeds">
+				<div class="block5-container container">
+					<div class="Title text-center d-flex flex-column">
+						<span class="Main-title">Наши отзывы</span>
+						<span class="Main-secondary">bubbls up</span>
+					</div>
+					<div class="b5-cards mt-2 d-flex flex-column gap-1">
+						<div class="slider">
+							<!-- Slider main container -->
+							<div class="swiper">
+								<!-- Additional required wrapper -->
+								<div class="swiper-wrapper">
+									<!-- Slides -->
+								</div>
+								<!-- If we need pagination -->
+								<div class="swiper-pagination"></div>
+								<!-- If we need navigation buttons -->
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+						</div>
+						<div class="b5-card special">
+							<span class="b5-name">Хотите написать нам отзыв?</span>
+							<div class="hr"></div>
+							<p class="b5-desc">Для нас важен каждый! </p>
+							<a target="_blank"
+								href="https://www.avito.ru/novosibirsk/predlozheniya_uslug/vozdushnye_shary_s_geliem_2369521321?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller">
+								<div class="b5-button button">Написать отзыв</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="footer-container container">
+				<div class="footer-lists">
+					<div class="footer-block">
+						<ul class="footer-list">Содержание
+							<a href="#hello">
+								<li class="footer-elements button">Главная</li>
+							</a>
+							<a href="#why">
+								<li class="footer-elements button">Почему мы</li>
+							</a>
+							<a href="#story">
+								<li class="footer-elements button">Наша история</li>
+							</a>
+							<a href="#contact">
+								<li class="footer-elements button">Контакты</li>
+							</a>
+							<a href="#catalog">
+								<li class="footer-elements button">Каталог</li>
+							</a>
+							<a href="#feeds">
+								<li class="footer-elements button">Отзывы</li>
+							</a>
+						</ul>
+						<ul class="footer-list">Наши контакты
+							<a href="https://wa.me/message/SYOTK6JVQEQIA1" target="_blank">
+								<li class="footer-elements button">WhatsApp</li>
+							</a>
+							<a href="https://vk.com/bubblesshariknsk" target="_blank">
+								<li class="footer-elements button">Vk</li>
+							</a>
+							<a href="https://www.avito.ru/novosibirsk/predlozheniya_uslug/vozdushnye_shary_s_geliem_2369521321?utm_campaign=native&utm_medium=item_page_android&utm_source=soc_sharing_seller"
+								target="_blank">
+								<li class="footer-elements button">Avito</li>
+							</a>
+							<li class="footer-elements">8-953-861-63-20
+							</li>
+						</ul>
+					</div>
+					<ul class="footer-list footer_list-last">
+						<div class="footer-title">
+							Где мы находимся:
+						</div>
+						<div class="footer-content">
+							<li class="footer-elements">Новосибирск:</li>
+							<li class="footer-elements">Калининский район,</li>
+							<li class="footer-elements">Родники</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div id="popup" class="popup"> </div>
+	<!--_________________________________________-->
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+	$(".ajaxform").submit(function () { // пeрeхвaтывaeм всe при сoбытии oтпрaвки
+
+		var form = $(this); // зaпишeм фoрму, чтoбы пoтoм нe былo прoблeм с this
+		var error = false; // прeдвaритeльнo oшибoк нeт
+
+		if (!error) { // eсли oшибки нeт
+
+			var data = form.serialize(); // пoдгoтaвливaeм дaнныe
+
+			$.ajax({ // инициaлизируeм ajax зaпрoс
+				type: 'POST', // oтпрaвляeм в POST фoрмaтe, мoжнo GET
+				url: 'assets/sources/php/send.php', // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
+				dataType: 'json', // oтвeт ждeм в json фoрмaтe
+				data: data, // дaнныe для oтпрaвки
+				beforeSend: function (data) { // сoбытиe дo oтпрaвки
+					form.find('input[type="submit"]').attr('disabled', 'disabled'); // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
+				},
+				complete: function (data) { // сoбытиe пoслe любoгo исхoдa
+					alert('Письмо отправлено');
+					form.find('input[type="submit"]').prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
+
+				}
+
+			});
+		}
+		return false; // вырубaeм стaндaртную oтпрaвку фoрмы
+	});
+</script>
+
+</html>

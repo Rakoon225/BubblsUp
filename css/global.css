@@ -1,0 +1,5 @@
+@import './base/vars.css';
+@import './base/index.css';
+@import './blocks/slider.css';
+@import './blocks/header.css';
+@import './base/media.css';
